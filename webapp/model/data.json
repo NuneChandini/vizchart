@@ -1,0 +1,17 @@
+{"data" : [{
+    "Category": "Category 1",
+    "Revenue": 100
+}, {
+    "Category": "Category 2",
+    "Revenue": 200
+}, {
+    "Category": "Category 3",
+    "Revenue": 300
+}, {
+    "Category": "Category 4",
+    "Revenue": 400
+}, {
+    "Category": "Category 5",
+    "Revenue": 500
+}]
+}

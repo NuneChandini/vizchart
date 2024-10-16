@@ -1,0 +1,191 @@
+<mvc:View
+    controllerName="vizchart.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:viz="sap.viz.ui5.controls"
+    xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+    xmlns:viz.data="sap.viz.ui5.data"
+    xmlns:l="sap.ui.layout"
+    xmlns:commons="sap.suite.ui.commons"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+     <!-- bar chart -->
+        <viz:VizFrame
+            id="chartcontainer"
+            vizType="bar"
+            width="100%"
+            height="100%" vizProperties="{title: {text: 'bar chart'}}"
+        >
+            <viz:dataset>
+                <viz.data:FlattenedDataset
+                    id="01"
+                    data="{/data}"
+                >
+                    <viz.data:dimensions>
+                        <viz.data:DimensionDefinition
+                            id="02"
+                            name="Category"
+                            value="{Category}"
+                        />
+                    </viz.data:dimensions>
+                    <viz.data:measures>
+                        <viz.data:MeasureDefinition
+                            id="03"
+                            name="Revenue"
+                            value="{Revenue}"
+                        />
+                    </viz.data:measures>
+                </viz.data:FlattenedDataset>
+            </viz:dataset>
+            <viz:feeds>
+                <viz.feeds:FeedItem
+                    id="04"
+                    uid="valueAxis"
+                    type="Measure"
+                    values="Revenue"
+                />
+                <viz.feeds:FeedItem
+                    id="05"
+                    uid="categoryAxis"
+                    type="Dimension"
+                    values="Category"
+                />
+            </viz:feeds>
+        </viz:VizFrame>
+
+        <!-- column chart -->
+        <viz:VizFrame
+            id="chartcontainer1"
+            vizType="column"
+            width="100%"
+            height="100%"  vizProperties="{title: {text: 'column chart'}}"
+        >
+            <viz:dataset >
+                <viz.data:FlattenedDataset
+                    
+                    data="{/data}"
+                >
+                    <viz.data:dimensions>
+                        <viz.data:DimensionDefinition
+                            
+                            name="Category"
+                            value="{Category}"
+                        />
+                    </viz.data:dimensions>
+                    <viz.data:measures>
+                        <viz.data:MeasureDefinition
+                            
+                            name="Revenue"
+                            value="{Revenue}"
+                        />
+                    </viz.data:measures>
+                </viz.data:FlattenedDataset>
+            </viz:dataset>
+            <viz:feeds>
+                <viz.feeds:FeedItem
+                    
+                    uid="valueAxis"
+                    type="Measure"
+                    values="Revenue"
+                />
+                <viz.feeds:FeedItem
+                    
+                    uid="categoryAxis"
+                    type="Dimension"
+                    values="Category"
+                />
+            </viz:feeds>
+        </viz:VizFrame>
+
+        <!-- pie chart -->
+        <viz:VizFrame
+            id="chartcontainer2"
+            vizType="pie"
+            width="100%"
+            height="100%"  vizProperties="{title: {text: 'pie chart'}}" 
+        >
+            <viz:dataset >
+                <viz.data:FlattenedDataset
+                    
+                    data="{/data}"
+                >
+                    <viz.data:dimensions>
+                        <viz.data:DimensionDefinition
+                            
+                            name="Category"
+                            value="{Category}"
+                        />
+                    </viz.data:dimensions>
+                    <viz.data:measures>
+                        <viz.data:MeasureDefinition
+                            
+                            name="Revenue"
+                            value="{Revenue}"
+                        />
+                    </viz.data:measures>
+                </viz.data:FlattenedDataset>
+            </viz:dataset>
+            <viz:feeds>
+                <viz.feeds:FeedItem
+                    
+                    uid="size"
+                    type="Measure"
+                    values="Revenue"
+                />
+                <viz.feeds:FeedItem
+                    
+                    uid="color"
+                    type="Dimension"
+                    values="Category"
+                />
+            </viz:feeds>
+        </viz:VizFrame>
+        <!-- line chart -->
+        <viz:VizFrame
+            id="chartcontainer3"
+            vizType="line"
+            width="100%"
+            height="100%" vizProperties="{title: {text: 'line chart'}}"
+        >
+            <viz:dataset>
+                <viz.data:FlattenedDataset
+                   
+                    data="{/data}"
+                >
+                    <viz.data:dimensions>
+                        <viz.data:DimensionDefinition
+                            
+                            name="Category"
+                            value="{Category}"
+                        />
+                    </viz.data:dimensions>
+                    <viz.data:measures>
+                        <viz.data:MeasureDefinition
+                            
+                            name="Revenue"
+                            value="{Revenue}"
+                        />
+                    </viz.data:measures>
+                </viz.data:FlattenedDataset>
+            </viz:dataset>
+            <viz:feeds>
+                <viz.feeds:FeedItem
+                    
+                    uid="valueAxis"
+                    type="Measure"
+                    values="Revenue"
+                />
+                <viz.feeds:FeedItem
+                    
+                    uid="categoryAxis"
+                    type="Dimension"
+                    values="Category"
+                />
+            </viz:feeds>
+        </viz:VizFrame>
+    </Page>
+</mvc:View>
